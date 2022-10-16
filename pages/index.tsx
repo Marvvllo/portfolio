@@ -8,17 +8,22 @@ const Home: NextPage = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <main className="text-white">
+    <main className="text-primary">
+      <Head>
+        <title>Marvello Nyahu</title>
+      </Head>
       <nav className="flex flex-row justify-between px-4 py-2">
-        <Link href="/" className="inline-block">
-          Nyahu
+        <Link href="/">
+          <a className="inline-block font-semibold text-base">
+            Nyahu
+          </a>
         </Link>
         <button onClick={() => setIsNavOpen(!isNavOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-6 h-6"
           >
