@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Home: NextPage = () => {
@@ -9,9 +10,9 @@ const Home: NextPage = () => {
   return (
     <main className="text-white">
       <nav className="flex flex-row justify-between px-4 py-2">
-        <a href="/" className="inline-block">
+        <Link href="/" className="inline-block">
           Nyahu
-        </a>
+        </Link>
         <button onClick={() => setIsNavOpen(!isNavOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

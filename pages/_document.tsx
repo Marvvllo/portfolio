@@ -4,8 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>Marvello Nyahu</title>
-
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
