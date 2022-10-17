@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <title>Marvello Nyahu</title>
       </Head>
 
-      <nav className="flex flex-row justify-between px-4 py-2">
+      <nav className="flex flex-row justify-between items-center px-4 py-2">
         <Link href="/">
           <a className="inline-block font-semibold text-lg">Nyahu</a>
         </Link>
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-7 h-7"
+            className="w-8 h-8"
           >
             <path
               stroke-linecap="round"
