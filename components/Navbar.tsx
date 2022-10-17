@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-10 h-10"
+          className="h-10 aspect-square"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
           />
         </svg>
