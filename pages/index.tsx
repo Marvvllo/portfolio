@@ -2,11 +2,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { PrimaryButton } from "../components/Buttons";
+import {
+  PrimaryButton,
+  SecondaryButton,
+} from "../components/Buttons";
 import Navbar from "../components/Navbar";
+import ProjectSection from "../components/ProjectSection";
 import photograph from "../public/images/photograph.jpg";
 import placeholder from "../public/images/16_9_placeholder.png";
+import marvalo from "../public/images/marvalo.png";
 
 const Home: NextPage = () => {
   return (
@@ -39,7 +43,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="flex flex-col items-center my-8 px-4 isolate relative">
+      <section className="flex flex-col items-center my-8 px-4 isolate">
         <h3 className="heading -mb-4">Projects</h3>
         <Image
           width={720}
@@ -48,7 +52,7 @@ const Home: NextPage = () => {
           src={placeholder}
         />
         <svg
-          className="my-2 w-8 h-8 "
+          className="w-8 h-8 mt-6"
           width="14"
           height="26"
           viewBox="0 0 14 26"
@@ -73,6 +77,32 @@ const Home: NextPage = () => {
           />
         </svg>
       </section>
+
+      <ProjectSection image={marvalo}>
+        <h3 className="heading self-center -mt-4">Marvalo</h3>
+
+        <p className="text-base mt-1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Voluptatibus repudiandae enim eius, esse nam fugit
+          consequatur minima voluptatem repellendus debitis!
+        </p>
+
+        <PrimaryButton
+          className="my-2"
+          href="https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859"
+          arrow
+        >
+          Visit Site
+        </PrimaryButton>
+
+        <SecondaryButton
+          className="my-2"
+          href="https://github.com/Marvvllo/marvalo"
+          arrow
+        >
+          Source Code
+        </SecondaryButton>
+      </ProjectSection>
     </main>
   );
 };
