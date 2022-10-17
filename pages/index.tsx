@@ -17,9 +17,7 @@ const Home: NextPage = () => {
 
       <nav className="flex flex-row justify-between px-4 py-2">
         <Link href="/">
-          <a className="inline-block font-semibold text-base">
-            Nyahu
-          </a>
+          <a className="inline-block font-semibold text-lg">Nyahu</a>
         </Link>
         <button onClick={() => setIsNavOpen(!isNavOpen)}>
           <svg
@@ -28,7 +26,7 @@ const Home: NextPage = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-7 h-7"
           >
             <path
               stroke-linecap="round"
