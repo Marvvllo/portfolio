@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <nav className="flex flex-row justify-between items-center px-4 py-2">
+    <nav className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center px-4 py-2">
       <Link href="/">
         <a className="inline-block font-semibold text-xl">Nyahu</a>
       </Link>
