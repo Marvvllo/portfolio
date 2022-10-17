@@ -15,10 +15,11 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
       className={`flex flex-col items-start px-4 isolate ${className}`}
     >
       <Image
-        width={720}
-        height={360}
+        width={1920}
+        height={850}
         className="-z-10 aspect-video"
         src={image}
+        alt="Project Image"
       />
       <div className="flex flex-col items-start">{children}</div>
     </section>

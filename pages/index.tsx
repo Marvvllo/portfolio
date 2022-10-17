@@ -29,7 +29,11 @@ const Home: NextPage = () => {
           </h1>
         </div>
         <div className="flex flex-col">
-          <Image className="-z-10" src={photograph} />
+          <Image
+            className="-z-10"
+            src={photograph}
+            alt="Photograph of Me"
+          />
           <div className="flex flex-col items-center gap-2 -mt-16">
             <span className="text-center font-semibold text-2xl">
               <h2 className="">Front End Developer</h2>
@@ -50,6 +54,7 @@ const Home: NextPage = () => {
           height={360}
           className="-z-10 aspect-video"
           src={placeholder}
+          alt="My Current Projects"
         />
         <svg
           className="w-8 h-8 mt-6"
@@ -60,6 +65,7 @@ const Home: NextPage = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            id="wheel"
             d="M7 6V11"
             stroke="#F3F4F6"
             strokeMiterlimit="1.5"
