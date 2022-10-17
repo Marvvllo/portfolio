@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
       <nav className="flex flex-row justify-between items-center px-4 py-2">
         <Link href="/">
-          <a className="inline-block font-semibold text-lg">Nyahu</a>
+          <a className="inline-block font-semibold text-xl">Nyahu</a>
         </Link>
         <button onClick={() => setIsNavOpen(!isNavOpen)}>
           <svg
