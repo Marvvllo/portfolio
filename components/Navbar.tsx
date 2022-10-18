@@ -9,7 +9,7 @@ const itemVariants: Variants = {
     y: 0,
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
-  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+  closed: { opacity: 0, y: 40, transition: { duration: 0.2 } },
 };
 
 const listVariants: Variants = {
@@ -26,7 +26,6 @@ const listVariants: Variants = {
   },
   closed: {
     opacity: 0,
-    display: "none",
     transition: {
       type: "spring",
       bounce: 0,
@@ -38,7 +37,7 @@ const listVariants: Variants = {
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <nav className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center px-4 py-2 isolate">
+    <header className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center px-4 py-2 isolate">
       <Link href="/">
         <a className="inline-block z-10 font-semibold text-xl">
           Nyahu
@@ -53,6 +52,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <motion.ul
+        layout
         className={`absolute inset-0 w-screen h-screen bg-black/75 backdrop-blur-sm
           flex flex-col items-center justify-center gap-16 text-2xl font-normal`}
         initial={true}
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
           <Link href="/">Contact</Link>
         </motion.li>
       </motion.ul>
-    </nav>
+    </header>
   );
 };
 
