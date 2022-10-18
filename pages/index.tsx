@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 import {
   PrimaryButton,
   SecondaryButton,
@@ -29,11 +30,27 @@ const Home: NextPage = () => {
           </h1>
         </div>
         <div className="flex flex-col">
-          <Image
-            className="-z-10"
-            src={photograph}
-            alt="Photograph of Me"
-          />
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+              zIndex: -10,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.7,
+                delay: 0.25,
+              },
+            }}
+          >
+            <Image
+              className=""
+              src={photograph}
+              alt="Photograph of Me"
+            />
+          </motion.div>
           <div className="flex flex-col items-center gap-2 -mt-16">
             <span className="text-center font-semibold text-2xl">
               <h2 className="">Front End Developer</h2>
