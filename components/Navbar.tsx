@@ -25,7 +25,6 @@ const listVariants: Variants = {
   },
   closed: {
     opacity: 0,
-    visibility: "hidden",
     transition: {
       type: "spring",
       bounce: 0,
