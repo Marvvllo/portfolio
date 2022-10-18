@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
     <header className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center px-4 py-2 isolate">
       <Link href="/">
         <a className="inline-block z-10 font-semibold text-xl">
-          Nyahu
+          Иyahu
         </a>
       </Link>
       <div className="z-10">
