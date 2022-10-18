@@ -15,17 +15,17 @@ const itemVariants: Variants = {
 const listVariants: Variants = {
   open: {
     opacity: 1,
-    display: "flex",
     transition: {
       type: "spring",
       bounce: 0,
       duration: 0.7,
       delayChildren: 0.3,
-      staggerChildren: 0.15,
+      staggerChildren: 0.05,
     },
   },
   closed: {
     opacity: 0,
+    visibility: "hidden",
     transition: {
       type: "spring",
       bounce: 0,
@@ -58,18 +58,27 @@ const Navbar: React.FC = () => {
         initial={true}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
+        style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
       >
         <motion.li variants={itemVariants}>
-          <Link href="/">Home</Link>
+          <Link href="/" passHref>
+            <a className="px-16 py-4">Home</a>
+          </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/">About</Link>
+          <Link href="/" passHref>
+            <a className="px-16 py-4">About</a>
+          </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/">Work</Link>
+          <Link href="/" passHref>
+            <a className="px-16 py-4">Work</a>
+          </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/">Contact</Link>
+          <Link href="/" passHref>
+            <a className="px-16 py-4">Contact</a>
+          </Link>
         </motion.li>
       </motion.ul>
     </header>
