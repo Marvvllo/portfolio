@@ -12,10 +12,11 @@ import ProjectSection from "../components/ProjectSection";
 import photograph from "../public/images/photograph.jpg";
 import placeholder from "../public/images/16_9_placeholder.png";
 import marvalo from "../public/images/marvalo.png";
+import { projects } from "../data/projects";
 
 const Home: NextPage = () => {
   return (
-    <main className="text-white">
+    <main className="text-white overflow-x-hidden ">
       <Head>
         <title>Marvello Nyahu</title>
       </Head>
