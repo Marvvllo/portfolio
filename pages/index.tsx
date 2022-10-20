@@ -16,7 +16,7 @@ import { projects } from "../data/projects";
 
 const Home: NextPage = () => {
   return (
-    <main className="text-white overflow-x-hidden ">
+    <main className="text-white ">
       <Head>
         <title>Marvello Nyahu</title>
       </Head>
