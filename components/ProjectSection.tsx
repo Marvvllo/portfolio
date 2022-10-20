@@ -17,7 +17,7 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
     <motion.section
       initial={{
         opacity: 0,
-        x: -400,
+        x: "-95vw",
       }}
       whileInView={{
         opacity: 1,
