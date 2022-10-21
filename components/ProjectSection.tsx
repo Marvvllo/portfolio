@@ -1,41 +1,73 @@
 import Image, { StaticImageData } from "next/image";
 import { HTMLProps } from "react";
 import { motion, Variants } from "framer-motion";
+import { PrimaryButton, SecondaryButton } from "./Buttons";
 
 const sectionVariants: Variants = {};
 
 type Props = {
   image: StaticImageData;
+  title: string;
+  desc?: string;
 };
 
 const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
   children,
-  image,
   className,
+  image,
+  title,
+  desc,
 }) => {
   return (
     <motion.section
       initial={{
+        y: "25vh",
         opacity: 0,
-        x: "-95vw",
       }}
       whileInView={{
+        y: 0,
         opacity: 1,
-        x: 0,
         transition: {
-          duration: 0.7,
+          duration: 0.5,
         },
       }}
-      className={`flex flex-col items-start px-4 my-8 isolate ${className}`}
+      viewport={{ once: true }}
+      className={`flex flex-col items-start sm:grid grid-cols-project sm:gap-8 sm:items-center sm:content-start my-8 isolate ${className}`}
     >
       <Image
         width={1920}
         height={850}
-        className="-z-10 aspect-video"
+        className="-z-10 aspect-video brightness-90"
         src={image}
         alt="Project Image"
       />
-      <div className="flex flex-col items-start">{children}</div>
+      <div className="flex flex-col items-start">
+        <h3 className="heading self-center text-2xl sm:text-5xl -mt-4 sm:mt-0 -translate-x-[50%] sm:self-start">
+          {title}
+        </h3>
+
+        <p className="text-base mt-1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Voluptatibus repudiandae enim eius, esse nam fugit
+          consequatur minima voluptatem repellendus debitis!
+        </p>
+
+        <PrimaryButton
+          className="my-2"
+          href="https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859"
+          arrow
+        >
+          Visit Site
+        </PrimaryButton>
+
+        <SecondaryButton
+          className="my-2"
+          href="https://github.com/Marvvllo/marvalo"
+          arrow
+        >
+          Source Code
+        </SecondaryButton>
+      </div>
     </motion.section>
   );
 };

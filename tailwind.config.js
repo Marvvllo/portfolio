@@ -12,6 +12,9 @@ module.exports = {
       },
       fontFamily: {
         sans: "Montserrat"
+      },
+      gridTemplateColumns: {
+        project: "2fr 1fr"
       }
     },
   },
