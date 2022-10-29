@@ -46,10 +46,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center py-2 px-8 sm:px-12 bg-gradient-to-b from-black to-transparent isolate text-white">
-      <Link href="/">
-        <a className="inline-block z-10 font-semibold text-xl">
-          Иyahu
-        </a>
+      <Link href="/" className="block z-10 font-semibold text-xl">
+        Иyahu
       </Link>
       <div className="z-10 sm:hidden">
         <Hamburger
@@ -61,30 +59,30 @@ const Navbar: React.FC = () => {
 
       <motion.ul
         layout
-        className={`absolute sm:static inset-0 w-screen h-screen sm:w-auto sm:h-auto backdrop-blur-sm
+        className={`absolute sm:static inset-0 w-screen h-screen sm:w-auto sm:h-auto backdrop-blur-sm sm:backdrop-blur-none
           flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-12 text-2xl sm:text-base font-medium`}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
       >
         <motion.li variants={itemVariants}>
-          <Link href="/" passHref>
-            <a className="nav__link py-4 ">Home</a>
+          <Link href="/" className="nav__link block py-4">
+            Home
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/" passHref>
-            <a className="nav__link py-4 ">About</a>
+          <Link href="/" className="nav__link block py-4">
+            About
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/" passHref>
-            <a className="nav__link py-4">Work</a>
+          <Link href="/Work" className="nav__link block py-4">
+            Work
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/" passHref>
-            <a className="nav__link py-4">Contact</a>
+          <Link href="/" className="nav__link block py-4">
+            Contact
           </Link>
         </motion.li>
       </motion.ul>
