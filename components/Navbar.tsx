@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
       <motion.ul
         layout
         className={`absolute sm:static inset-0 w-screen h-screen sm:w-auto sm:h-auto backdrop-blur-sm sm:backdrop-blur-none
-          flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-12 text-2xl sm:text-base font-medium`}
+          bg-black/50 flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-12 text-2xl sm:text-base font-medium`}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
