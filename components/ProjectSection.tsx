@@ -19,30 +19,28 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
   desc,
 }) => {
   return (
-    <motion.section
-      initial={{
-        y: "25vh",
-        opacity: 0,
-      }}
-      whileInView={{
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.5,
-        },
-      }}
-      viewport={{ once: true }}
+    <section
       className={`flex flex-col items-start sm:grid grid-cols-project sm:gap-8 sm:items-center sm:content-start my-8 isolate ${className}`}
     >
-      <Image
-        width={1920}
-        height={850}
-        className="-z-10 aspect-video brightness-90"
-        src={image}
-        alt="Project Image"
-      />
+      <motion.div
+        initial={{
+          y: "25vh",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        viewport={{ once: true }}
+        className="-z-10 "
+      >
+        <Image className="" src={image} alt="Project Image" />
+      </motion.div>
       <div className="flex flex-col items-start">
-        <h3 className="heading self-center text-2xl sm:text-5xl -mt-4 sm:mt-0 -translate-x-[50%] sm:self-start">
+        <h3 className="heading self-center text-2xl sm:text-5xl -mt-4 sm:mt-0 sm:-translate-x-[50%] sm:self-start">
           {title}
         </h3>
 
@@ -68,7 +66,7 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
           Source Code
         </SecondaryButton>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

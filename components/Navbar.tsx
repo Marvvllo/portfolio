@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
       <motion.ul
         layout
         className={`absolute sm:static inset-0 w-screen h-screen sm:w-auto sm:h-auto backdrop-blur-sm sm:backdrop-blur-none
-          bg-black/50 flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-12 text-2xl sm:text-base font-medium`}
+          bg-black/50 sm:bg-transparent flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-12 text-2xl sm:text-base font-medium`}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
@@ -71,17 +71,17 @@ const Navbar: React.FC = () => {
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/" className="nav__link block py-4">
+          <Link href="/about" className="nav__link block py-4">
             About
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/Work" className="nav__link block py-4">
+          <Link href="/work" className="nav__link block py-4">
             Work
           </Link>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <Link href="/" className="nav__link block py-4">
+          <Link href="/contact" className="nav__link block py-4">
             Contact
           </Link>
         </motion.li>
