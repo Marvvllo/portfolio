@@ -41,7 +41,9 @@ const Navbar: React.FC = () => {
   });
 
   useEffect(() => {
-    setIsNavOpen(true);
+    if (isMedium) {
+      setIsNavOpen(true);
+    }
   }, [isMedium]);
 
   return (
