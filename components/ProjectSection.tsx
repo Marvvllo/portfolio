@@ -20,7 +20,7 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
 }) => {
   return (
     <section
-      className={`flex flex-col items-start sm:grid grid-cols-project sm:gap-8 sm:items-center sm:content-start my-8 isolate ${className}`}
+      className={`flex flex-col items-start sm:grid grid-cols-project sm:gap-8 sm:items-center sm:content-start isolate ${className}`}
     >
       <motion.div
         initial={{
@@ -55,7 +55,7 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
           href="https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859"
           arrow
         >
-          Visit Site
+          Learn More
         </PrimaryButton>
 
         <SecondaryButton
