@@ -11,11 +11,15 @@ module.exports = {
         white: "#F3F4F6"
       },
       fontFamily: {
-        sans: "Montserrat"
+        sans: "Montserrat",
+        display: "GetaiGrotesk"
       },
       gridTemplateColumns: {
         project: "2fr 1fr"
-      }
+      },
+      spacing: {
+        'half-text': '.5em'
+      },
     },
   },
   plugins: [],

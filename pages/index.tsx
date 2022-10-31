@@ -54,9 +54,7 @@ const Home: NextPage = () => {
 
       <article className="flex flex-col gap-16 md:gap-32">
         <div className="">
-          <h1 className="heading text-4xl md:text-6xl -mb-4 md:-mb-6">
-            Projects
-          </h1>
+          <h1 className="heading text-4xl md:text-6xl">Projects</h1>
         </div>
         <ProjectSection image={marvalo} title="Marvalo" />
         <ProjectSection image={eleganter} title="Eleganter" />
@@ -70,8 +68,9 @@ const Hero: React.FC = () => {
   return (
     <section className="isolate">
       <div className="">
-        <h1 className="heading text-4xl md:text-6xl -mb-4 md:-mb-6">
+        <h1 className="heading text-4xl md:text-6xl -mb-half-text">
           Marvello Nyahu
+          {/* marvello nyahu */}
         </h1>
       </div>
       <div className="flex flex-col md:grid grid-cols-2 md:gap-8 md:items-center md:content-start">
@@ -113,7 +112,7 @@ const Hero: React.FC = () => {
 const AboutMe = () => {
   return (
     <section className="flex flex-col items-center isolate">
-      <h3 className="heading -mb-4 md:text-5xl">About Me</h3>
+      <h3 className="heading -mb-half-text md:text-5xl">About Me</h3>
       <motion.div
         initial={{
           opacity: 0,

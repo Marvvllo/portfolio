@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "GetaiGrotesk";
+  src: url("../public/fonts/GetaiGrotesk/DTGetaiGroteskDisplay-Black.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @layer components {
   .heading {
-    @apply text-2xl font-bold text-center;
+    @apply text-2xl font-display font-bold text-center;
   }
 }
 
