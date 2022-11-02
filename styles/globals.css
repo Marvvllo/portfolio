@@ -9,7 +9,7 @@
 @tailwind components;
 @layer components {
   .heading {
-    @apply text-2xl font-display font-bold text-center;
+    @apply text-2xl font-display font-bold text-center text-gold;
   }
 }
 

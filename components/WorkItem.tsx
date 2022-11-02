@@ -11,7 +11,7 @@ type Props = {
   desc?: string;
 };
 
-const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
+const WorkItem: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
   children,
   className,
   image,
@@ -20,7 +20,7 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
 }) => {
   return (
     <section
-      className={`flex flex-col items-start md:grid grid-cols-project md:gap-8 md:items-center md:content-start isolate ${className}`}
+      className={`flex flex-col items-start md:grid grid-cols-work-item md:gap-8 md:items-center md:content-start isolate ${className}`}
     >
       <motion.div
         initial={{
@@ -70,4 +70,4 @@ const ProjectSection: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
   );
 };
 
-export default ProjectSection;
+export default WorkItem;

@@ -1,12 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
-import {
-  PrimaryButton,
-  SecondaryButton,
-} from "../components/Buttons";
-import ProjectSection from "../components/ProjectSection";
+import { motion } from "framer-motion";
+import { PrimaryButton } from "../components/Buttons";
+import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
 import GameDay from "../public/images/gameday.png";
 import AboutMeImage from "../public/images/about-me.png";
@@ -52,14 +49,7 @@ const Home: NextPage = () => {
         />
       </svg>
 
-      <article className="flex flex-col gap-16 md:gap-32">
-        <div className="">
-          <h1 className="heading text-4xl md:text-6xl">Projects</h1>
-        </div>
-        <ProjectSection image={marvalo} title="Marvalo" />
-        <ProjectSection image={eleganter} title="Eleganter" />
-        <ProjectSection image={GameDay} title="GameDay" />
-      </article>
+      <WorkSection />
     </main>
   );
 };
@@ -112,7 +102,9 @@ const Hero: React.FC = () => {
 const AboutMe = () => {
   return (
     <section className="flex flex-col items-center isolate">
-      <h3 className="heading -mb-half-text md:text-5xl">About Me</h3>
+      <h3 className="heading -mb-half-text text-4xl md:text-5xl">
+        About Me
+      </h3>
       <motion.div
         initial={{
           opacity: 0,
@@ -138,6 +130,19 @@ const AboutMe = () => {
         />
       </motion.div>
     </section>
+  );
+};
+
+const WorkSection = () => {
+  return (
+    <article className="flex flex-col gap-16 md:gap-32">
+      <div className="">
+        <h1 className="heading text-4xl md:text-6xl">Work</h1>
+      </div>
+      <WorkItem image={marvalo} title="Marvalo" />
+      <WorkItem image={eleganter} title="Eleganter" />
+      <WorkItem image={GameDay} title="GameDay" />
+    </article>
   );
 };
 
