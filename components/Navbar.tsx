@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { motion, Variants } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { useRouter } from "next/router";
 
 const itemVariants: Variants = {
   open: {
@@ -34,8 +35,28 @@ const listVariants: Variants = {
   },
 };
 
+const navLinks = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "About",
+    href: "/about",
+  },
+  {
+    text: "Work",
+    href: "/work",
+  },
+  {
+    text: "Contact",
+    href: "/contact",
+  },
+];
+
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
   const isMedium = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -67,26 +88,18 @@ const Navbar: React.FC = () => {
         variants={listVariants}
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
       >
-        <motion.li variants={itemVariants}>
-          <Link href="/" className="nav__link block py-4">
-            Home
-          </Link>
-        </motion.li>
-        <motion.li variants={itemVariants}>
-          <Link href="/about" className="nav__link block py-4">
-            About
-          </Link>
-        </motion.li>
-        <motion.li variants={itemVariants}>
-          <Link href="/work" className="nav__link block py-4">
-            Work
-          </Link>
-        </motion.li>
-        <motion.li variants={itemVariants}>
-          <Link href="/contact" className="nav__link block py-4">
-            Contact
-          </Link>
-        </motion.li>
+        {navLinks.map((nav) => (
+          <motion.li variants={itemVariants}>
+            <Link
+              href={nav.href}
+              className={`nav__link block py-4 ${
+                router.asPath === nav.href ? "active" : null
+              }`}
+            >
+              {nav.text}
+            </Link>
+          </motion.li>
+        ))}
       </motion.ul>
     </header>
   );

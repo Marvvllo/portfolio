@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { PrimaryButton } from "../components/Buttons";
 import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
-import GameDay from "../public/images/gameday.png";
 import AboutMeImage from "../public/images/about-me.png";
+import GameDay from "../public/images/gameday.png";
 import marvalo from "../public/images/marvalo.png";
 import eleganter from "../public/images/eleganter.png";
+import { work } from "../data/work";
 
 const Home: NextPage = () => {
   return (
@@ -58,9 +59,8 @@ const Hero: React.FC = () => {
   return (
     <section className="isolate">
       <div className="">
-        <h1 className="heading text-4xl md:text-6xl -mb-half-text">
+        <h1 className="heading text-3xl md:text-6xl -mb-half-text">
           Marvello Nyahu
-          {/* marvello nyahu */}
         </h1>
       </div>
       <div className="flex flex-col md:grid grid-cols-2 md:gap-8 md:items-center md:content-start">
@@ -101,8 +101,8 @@ const Hero: React.FC = () => {
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-col items-center isolate">
-      <h3 className="heading -mb-half-text text-4xl md:text-5xl">
+    <section className="flex flex-col items-center isolate ">
+      <h3 className="heading -mb-half-text text-3xl md:text-5xl">
         About Me
       </h3>
       <motion.div
@@ -135,13 +135,17 @@ const AboutMe = () => {
 
 const WorkSection = () => {
   return (
-    <article className="flex flex-col gap-16 md:gap-32">
+    <article className="flex flex-col gap-16 md:gap-32 pb-48">
       <div className="">
-        <h1 className="heading text-4xl md:text-6xl">Work</h1>
+        <h1 className="heading text-3xl md:text-6xl">Work</h1>
       </div>
-      <WorkItem image={marvalo} title="Marvalo" />
-      <WorkItem image={eleganter} title="Eleganter" />
-      <WorkItem image={GameDay} title="GameDay" />
+      {work.map((work) => (
+        <WorkItem
+          image={work.image}
+          title={work.title}
+          snippet={work.snippet}
+        />
+      ))}
     </article>
   );
 };

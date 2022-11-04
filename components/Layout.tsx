@@ -7,7 +7,7 @@ const Layout: React.FC<HTMLProps<HTMLDivElement>> = ({
   return (
     <>
       <Navbar />
-      <div className="px-8 sm:px-16">{children}</div>
+      <div className="px-8 sm:px-12 ">{children}</div>
     </>
   );
 };

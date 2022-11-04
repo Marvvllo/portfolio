@@ -9,7 +9,7 @@
 @tailwind components;
 @layer components {
   .heading {
-    @apply text-2xl font-display font-bold text-center text-gold;
+    @apply text-2xl font-display font-bold text-center ;
   }
 }
 
@@ -44,7 +44,8 @@ svg #wheel {
   @apply top-5 sm:top-[1.125em];
 }
 
-.nav__link:hover::after {
+.nav__link:hover::after,
+.nav__link.active::after {
   opacity: 1;
   translate: 0;
 }
