@@ -141,6 +141,7 @@ const WorkSection = () => {
       </div>
       {work.map((work) => (
         <WorkItem
+          key={work.id}
           image={work.image}
           title={work.title}
           snippet={work.snippet}

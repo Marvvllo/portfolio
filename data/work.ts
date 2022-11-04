@@ -4,6 +4,7 @@ import marvaloImage from "../public/images/marvalo.png";
 import eleganterImage from "../public/images/eleganter.png";
 
 type project = {
+  id: number;
   image: StaticImageData;
   title: string;
   snippet: string;
@@ -14,6 +15,7 @@ type project = {
 
 export const work: Array<project> = [
   {
+    id: 1,
     image: eleganterImage,
     title: "Eleganter",
     snippet:
@@ -23,6 +25,7 @@ export const work: Array<project> = [
       "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
+    id: 2,
     image: marvaloImage,
     title: "Marvalo",
     snippet:
@@ -32,6 +35,7 @@ export const work: Array<project> = [
       "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
+    id: 3,
     image: gamedayImage,
     title: "GameDay",
     snippet:

@@ -37,18 +37,22 @@ const listVariants: Variants = {
 
 const navLinks = [
   {
+    id: 1,
     text: "Home",
     href: "/",
   },
   {
+    id: 2,
     text: "About",
     href: "/about",
   },
   {
+    id: 3,
     text: "Work",
     href: "/work",
   },
   {
+    id: 4,
     text: "Contact",
     href: "/contact",
   },
@@ -89,7 +93,7 @@ const Navbar: React.FC = () => {
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
       >
         {navLinks.map((nav) => (
-          <motion.li variants={itemVariants}>
+          <motion.li variants={itemVariants} key={nav.id}>
             <Link
               href={nav.href}
               className={`nav__link block py-4 ${
