@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
             height={500}
             className="ml-auto rounded-md w-full md:w-96"
             src={photograph}
-            alt="Photograph of Me"
+            alt="Me winning a competition"
           />
         </motion.div>
         <div className="flex flex-col items-center md:items-start gap-2 -mt-16 md:mt-0 mx-auto">
@@ -78,17 +78,17 @@ const AboutMe = () => {
         About
       </OutlinedText>
 
-      <div className="md:grid grid-cols-2 items-center gap-8">
+      <div className="grid md:grid-cols-2 items-center gap-4">
         <div className="md:justify-self-end">
           <Image
             height={500}
             className="rounded-md brightness-75"
             src={AboutMeImage}
-            alt="My Current Projects"
+            alt="Me in school"
           />
         </div>
 
-        <div className="flex flex-col items-center md:items-start gap-2 md:mt-2">
+        <div className="flex flex-col items-center md:items-start gap-4 md:mt-2">
           <div className="">
             <p className="max-w-[45ch] md:text-2xl indent-8 md:indent-0">
               A front end developer hailing from Borneo, Indonesia
