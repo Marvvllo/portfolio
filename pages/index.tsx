@@ -13,42 +13,10 @@ import { work } from "../data/work";
 
 const Home: NextPage = () => {
   return (
-    <main className="text-white flex flex-col gap-16">
-      <Head>
-        <title>Marvello Nyahu</title>
-      </Head>
-
+    <main className="text-white flex flex-col gap-24">
       <Hero />
 
       <AboutMe />
-
-      {/* Scroll Wheel */}
-      <svg
-        className="block w-8 h-8 md:w-12 md:h-12 my-auto self-center"
-        width="14"
-        height="26"
-        viewBox="0 0 14 26"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          id="wheel"
-          d="M7 6V11"
-          stroke="#F3F4F6"
-          strokeMiterlimit="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M13 8.35391C13 4.29515 10.3115 1 7.00003 1C3.6885 1 1 4.29515 1 8.35391V17.6461C1 21.7049 3.6885 25 7.00003 25C10.3115 25 13 21.7049 13 17.6461V8.35391V8.35391Z"
-          stroke="#F3F4F6"
-          strokeMiterlimit="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
 
       <WorkSection />
     </main>
@@ -57,10 +25,10 @@ const Home: NextPage = () => {
 
 const Hero: React.FC = () => {
   return (
-    <section className="isolate flex flex-col">
-      <div className="self-start">
-        <h1 className="heading text-3xl md:text-8xl -mb-half-text">
-          Marvello
+    <section className="isolate flex flex-col items-center">
+      <div className="md:self-start">
+        <h1 className="heading text-3xl md:text-8xl -ml-1.5 -mb-half-text">
+          Marvello <span className="inline md:hidden">Nyahu</span>
         </h1>
       </div>
 
@@ -82,7 +50,7 @@ const Hero: React.FC = () => {
         >
           <Image
             height={400}
-            className="ml-auto"
+            className="ml-auto rounded-md"
             src={photograph}
             alt="Photograph of Me"
           />
@@ -92,14 +60,14 @@ const Hero: React.FC = () => {
             <h2 className="">Front End Developer</h2>
             <h2 className="">UI Designer</h2>
           </span>
-          <PrimaryButton href="/contact" arrow>
-            Contact Me
+          <PrimaryButton href="/work" arrow>
+            See my works
           </PrimaryButton>
         </div>
       </div>
 
       <div className="">
-        <h1 className="heading text-3xl md:text-8xl -mt-half-text">
+        <h1 className="heading hidden md:block text-8xl -mt-half-text">
           Nyahu
         </h1>
       </div>
@@ -132,7 +100,7 @@ const AboutMe = () => {
         <Image
           width={500}
           height={500}
-          className="  brightness-75"
+          className="rounded-md brightness-75"
           src={AboutMeImage}
           alt="My Current Projects"
         />

@@ -38,7 +38,11 @@ const WorkItem: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
       className={`flex flex-col items-start md:grid grid-cols-work-item md:gap-8 md:items-center md:content-start isolate ${className}`}
     >
       <div className="-z-10">
-        <Image className="" src={image} alt="Project Image" />
+        <Image
+          className="rounded-md"
+          src={image}
+          alt="Project Image"
+        />
       </div>
       <div className="flex flex-col items-start">
         <h3 className="heading self-center text-2xl md:text-5xl -mt-half-text md:mt-0 md:-translate-x-[50%] md:self-start">
