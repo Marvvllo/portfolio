@@ -43,8 +43,8 @@ const navLinks = [
   },
   {
     id: 2,
-    text: "About",
-    href: "/about",
+    text: "Timeline",
+    href: "/timeline",
   },
   {
     id: 3,

@@ -1,15 +1,12 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PrimaryButton } from "../components/Buttons";
 import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
 import AboutMeImage from "../public/images/about-me.png";
-import GameDay from "../public/images/gameday.png";
-import marvalo from "../public/images/marvalo.png";
-import eleganter from "../public/images/eleganter.png";
 import { work } from "../data/work";
+import OutlinedText from "../components/OutlinedText";
 
 const Home: NextPage = () => {
   return (
@@ -26,14 +23,9 @@ const Home: NextPage = () => {
 const Hero: React.FC = () => {
   return (
     <section className="isolate flex flex-col items-center">
-      <div className="md:self-start relative text-3xl md:text-8xl -ml-1.5 -mb-half-text">
-        <h2 className="heading ">
-          Marvello<span className="inline md:hidden"> Nyahu</span>
-        </h2>
-        <h2 className="z-20 absolute top-0 right-0 heading text-transparent text-outlined">
-          Marvello<span className="inline md:hidden"> Nyahu</span>
-        </h2>
-      </div>
+      <OutlinedText className="md:self-start text-4xl md:text-8xl -ml-1.5">
+        Marvello<span className="inline md:hidden"> Nyahu</span>
+      </OutlinedText>
 
       <div className="z-10 flex flex-col md:grid grid-cols-2 md:items-center">
         <motion.div
@@ -52,8 +44,8 @@ const Hero: React.FC = () => {
           }}
         >
           <Image
-            height={400}
-            className="ml-auto rounded-md"
+            height={500}
+            className="ml-auto rounded-md w-full md:w-96"
             src={photograph}
             alt="Photograph of Me"
           />
@@ -69,46 +61,45 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative hidden md:block ">
-        <h2 className="heading text-8xl -mt-half-text">Nyahu</h2>
-        <h2 className="z-20 absolute -top-half-text left-0 heading text-3xl md:text-8xl text-transparent text-outlined">
-          Nyahu
-        </h2>
-      </div>
+      <OutlinedText
+        className="hidden md:block text-4xl md:text-8xl -ml-1.5"
+        shiftUp
+      >
+        Nyahu
+      </OutlinedText>
     </section>
   );
 };
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-col items-center isolate ">
-      <h3 className="heading -mb-half-text text-3xl md:text-5xl">
-        About Me
-      </h3>
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 100,
-          zIndex: -10,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.7,
-          },
-        }}
-        viewport={{ once: true }}
-        className="-z-10"
-      >
-        <Image
-          width={500}
-          height={500}
-          className="rounded-md brightness-75"
-          src={AboutMeImage}
-          alt="My Current Projects"
-        />
-      </motion.div>
+    <section className="isolate relative md:flex flex-row items-center">
+      <OutlinedText className="text-4xl md:text-8xl md:-mr-52">
+        About
+      </OutlinedText>
+
+      <div className="md:grid grid-cols-2 items-center gap-8">
+        <div className="md:justify-self-end">
+          <Image
+            height={500}
+            className="rounded-md brightness-75"
+            src={AboutMeImage}
+            alt="My Current Projects"
+          />
+        </div>
+
+        <div className="flex flex-col items-center md:items-start gap-2 md:mt-2">
+          <div className="">
+            <p className="max-w-[45ch] md:text-2xl indent-8 md:indent-0">
+              A front end developer hailing from Borneo, Indonesia
+              with a background in diversitiy and web development.
+            </p>
+          </div>
+          <PrimaryButton href="/timeline" arrow className="">
+            Catch up
+          </PrimaryButton>
+        </div>
+      </div>
     </section>
   );
 };
