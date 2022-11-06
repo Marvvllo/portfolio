@@ -26,13 +26,16 @@ const Home: NextPage = () => {
 const Hero: React.FC = () => {
   return (
     <section className="isolate flex flex-col items-center">
-      <div className="md:self-start">
-        <h1 className="heading text-3xl md:text-8xl -ml-1.5 -mb-half-text">
+      <div className="md:self-start relative text-3xl md:text-8xl -ml-1.5 -mb-half-text">
+        <h2 className="heading ">
           Marvello <span className="inline md:hidden">Nyahu</span>
-        </h1>
+        </h2>
+        <h2 className="z-20 absolute top-0 right-0 heading text-transparent text-outlined">
+          Marvello <span className="inline md:hidden">Nyahu</span>
+        </h2>
       </div>
 
-      <div className="flex flex-col md:grid grid-cols-2 md:gap-0 md:items-center">
+      <div className="z-10 flex flex-col md:grid grid-cols-2 md:items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -66,10 +69,11 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="">
-        <h1 className="heading hidden md:block text-8xl -mt-half-text">
+      <div className="relative hidden md:block ">
+        <h2 className="heading text-8xl -mt-half-text">Nyahu</h2>
+        <h2 className="z-20 absolute -top-half-text left-0 heading text-3xl md:text-8xl text-transparent text-outlined">
           Nyahu
-        </h1>
+        </h2>
       </div>
     </section>
   );
@@ -113,7 +117,7 @@ const WorkSection = () => {
   return (
     <article className="flex flex-col gap-16 md:gap-32 pb-48">
       <div className="">
-        <h1 className="heading text-3xl md:text-6xl">Work</h1>
+        <h2 className="heading text-3xl md:text-6xl">Work</h2>
       </div>
       {work.map((work) => (
         <WorkItem

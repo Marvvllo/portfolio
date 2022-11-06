@@ -19,7 +19,7 @@ module.exports = {
         'work-item': "2fr 1fr"
       },
       spacing: {
-        'half-text': '.5em'
+        'half-text': '.65em'
       },
     },
   },
