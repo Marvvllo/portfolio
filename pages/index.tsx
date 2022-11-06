@@ -28,10 +28,10 @@ const Hero: React.FC = () => {
     <section className="isolate flex flex-col items-center">
       <div className="md:self-start relative text-3xl md:text-8xl -ml-1.5 -mb-half-text">
         <h2 className="heading ">
-          Marvello <span className="inline md:hidden">Nyahu</span>
+          Marvello<span className="inline md:hidden"> Nyahu</span>
         </h2>
         <h2 className="z-20 absolute top-0 right-0 heading text-transparent text-outlined">
-          Marvello <span className="inline md:hidden">Nyahu</span>
+          Marvello<span className="inline md:hidden"> Nyahu</span>
         </h2>
       </div>
 
