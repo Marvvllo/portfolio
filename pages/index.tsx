@@ -57,13 +57,14 @@ const Home: NextPage = () => {
 
 const Hero: React.FC = () => {
   return (
-    <section className="isolate">
-      <div className="">
-        <h1 className="heading text-3xl md:text-6xl -mb-half-text">
-          Marvello Nyahu
+    <section className="isolate flex flex-col">
+      <div className="self-start">
+        <h1 className="heading text-3xl md:text-8xl -mb-half-text">
+          Marvello
         </h1>
       </div>
-      <div className="flex flex-col md:grid grid-cols-2 md:gap-8 md:items-center md:content-start">
+
+      <div className="flex flex-col md:grid grid-cols-2 md:gap-0 md:items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -80,12 +81,13 @@ const Hero: React.FC = () => {
           }}
         >
           <Image
-            className=""
+            height={400}
+            className="ml-auto"
             src={photograph}
             alt="Photograph of Me"
           />
         </motion.div>
-        <div className="flex flex-col items-center md:items-start gap-2 -mt-16">
+        <div className="flex flex-col items-center md:items-start gap-2 -mt-16 md:mt-0 mx-auto">
           <span className="text-center md:text-left font-semibold text-2xl">
             <h2 className="">Front End Developer</h2>
             <h2 className="">UI Designer</h2>
@@ -94,6 +96,12 @@ const Hero: React.FC = () => {
             Contact Me
           </PrimaryButton>
         </div>
+      </div>
+
+      <div className="">
+        <h1 className="heading text-3xl md:text-8xl -mt-half-text">
+          Nyahu
+        </h1>
       </div>
     </section>
   );
