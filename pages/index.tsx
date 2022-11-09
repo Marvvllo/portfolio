@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="isolate flex flex-col items-center">
-      <OutlinedText className="md:self-start text-3xl md:text-8xl -ml-1.5">
+      <OutlinedText className="md:self-start text-3xl md:text-8xl -ml-1.5 -mb-[1.25em] md:-mb-half-text">
         {/* Marvello<span className="inline md:hidden"> Nyahu</span> */}
         <ReactTextTransition
           springConfig={presets.gentle}
@@ -83,10 +83,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <OutlinedText
-        className="hidden md:block text-4xl order-1 md:text-8xl -ml-1.5"
-        shiftUp
-      >
+      <OutlinedText className="hidden md:block text-4xl order-1 md:text-8xl -ml-1.5 -mt-half-text">
         Developer
       </OutlinedText>
     </section>
