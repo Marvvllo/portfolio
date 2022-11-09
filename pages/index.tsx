@@ -7,6 +7,8 @@ import photograph from "../public/images/photograph.jpg";
 import AboutMeImage from "../public/images/about-me.png";
 import { work } from "../data/work";
 import OutlinedText from "../components/OutlinedText";
+import ReactTextTransition, { presets } from "react-text-transition";
+import { useState } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -21,13 +23,33 @@ const Home: NextPage = () => {
 };
 
 const Hero: React.FC = () => {
+  const texts = ["Front End", "React", "Next JS", "Tailwind"];
+
+  const [textIndex, setTextIndex] = useState(0);
+
+  setTimeout(() => {
+    if (textIndex == 3) {
+      setTextIndex(0);
+    } else {
+      setTextIndex(textIndex + 1);
+    }
+  }, 2000);
+
   return (
     <section className="isolate flex flex-col items-center">
-      <OutlinedText className="md:self-start text-4xl md:text-8xl -ml-1.5">
-        Marvello<span className="inline md:hidden"> Nyahu</span>
+      <OutlinedText className="md:self-start text-3xl md:text-8xl -ml-1.5">
+        {/* Marvello<span className="inline md:hidden"> Nyahu</span> */}
+        <ReactTextTransition
+          springConfig={presets.gentle}
+          inline
+          direction="down"
+        >
+          {texts[textIndex]}
+        </ReactTextTransition>
+        <span className="block md:hidden"> Developer</span>
       </OutlinedText>
 
-      <div className="z-10 flex flex-col md:grid grid-cols-2 md:items-center">
+      <div className="z-10 flex flex-col md:grid grid-cols-2 md:gap-8 md:items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -50,10 +72,10 @@ const Hero: React.FC = () => {
             alt="Me winning a competition"
           />
         </motion.div>
-        <div className="flex flex-col items-center md:items-start gap-2 -mt-16 md:mt-0 mx-auto">
+        <div className="flex flex-col items-center md:items-start gap-2">
           <span className="text-center md:text-left font-semibold text-2xl">
-            <h2 className="">Front End Developer</h2>
-            <h2 className="">UI Designer</h2>
+            <h2 className="">Hello I'm Marvello Nyahu,</h2>
+            <h2 className="">A developer with design experience.</h2>
           </span>
           <PrimaryButton href="/work" arrow>
             See my works
@@ -62,10 +84,10 @@ const Hero: React.FC = () => {
       </div>
 
       <OutlinedText
-        className="hidden md:block text-4xl md:text-8xl -ml-1.5"
+        className="hidden md:block text-4xl order-1 md:text-8xl -ml-1.5"
         shiftUp
       >
-        Nyahu
+        Developer
       </OutlinedText>
     </section>
   );
@@ -78,7 +100,7 @@ const AboutMe = () => {
         About
       </OutlinedText>
 
-      <div className="grid md:grid-cols-2 items-center gap-4">
+      <div className="grid md:grid-cols-2 items-center gap-8">
         <div className="md:justify-self-end">
           <Image
             height={500}
@@ -90,7 +112,7 @@ const AboutMe = () => {
 
         <div className="flex flex-col items-center md:items-start gap-4 md:mt-2">
           <div className="">
-            <p className="max-w-[45ch] md:text-2xl indent-8 md:indent-0">
+            <p className="max-w-[35ch] md:text-xl indent-8 md:indent-0">
               A front end developer hailing from Borneo, Indonesia
               with a background in diversitiy and web development.
             </p>
