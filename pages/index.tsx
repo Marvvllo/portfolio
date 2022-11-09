@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
         </motion.div>
         <div className="flex flex-col items-center md:items-start gap-2">
           <span className="text-center md:text-left font-semibold text-2xl">
-            <h2 className="">Hello I'm Marvello Nyahu,</h2>
+            <h2 className="">{"Hello I'm Marvello Nyahu,"}</h2>
             <h2 className="">A developer with design experience.</h2>
           </span>
           <PrimaryButton href="/work" arrow>
