@@ -23,9 +23,7 @@ const Carousel = () => {
               <StackedCarousel
                 ref={carouselRef}
                 slideComponent={Item}
-                slideWidth={
-                  parentWidth < 800 ? parentWidth - 40 : 750
-                }
+                slideWidth={parentWidth > 800 ? 750 : parentWidth}
                 carouselWidth={parentWidth}
                 data={works}
                 currentVisibleSlide={currentVisibleSlide}
@@ -94,7 +92,7 @@ const Item = (props: any) => {
         alt="image"
         draggable={false}
       />
-      <p className="heading text-left text-2xl md:text-xl">{title}</p>
+      <p className="heading text-left text-xl md:text-2xl">{title}</p>
     </Link>
   );
 };

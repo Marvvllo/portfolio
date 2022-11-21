@@ -13,7 +13,7 @@ import WorksSection from "../components/WorksSection";
 
 const Home: NextPage = () => {
   return (
-    <main className="text-white flex flex-col gap-32">
+    <main className="text-white flex flex-col gap-32 pb-16">
       <Hero />
 
       <AboutMe />
