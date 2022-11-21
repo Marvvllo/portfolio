@@ -99,7 +99,7 @@ const AboutMe = () => {
       </OutlinedText>
 
       <div className="grid md:grid-cols-2 items-center gap-2 md:gap-8">
-        <div className="md:justify-self-end">
+        <div className="justify-self-center md:justify-self-end">
           <Image
             height={500}
             className="rounded-md brightness-75"
