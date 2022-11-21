@@ -15,6 +15,7 @@ specifiers:
   react-dom: 18.2.0
   react-responsive: ^9.0.0
   react-spring: ^9.5.5
+  react-stacked-center-carousel: ^1.0.12
   react-text-transition: ^3.0.2
   sharp: ^0.31.2
   tailwindcss: ^3.1.8
@@ -28,6 +29,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-responsive: 9.0.0_react@18.2.0
   react-spring: 9.5.5_biqbaboplfbrettd7655fr4n2y
+  react-stacked-center-carousel: 1.0.12_biqbaboplfbrettd7655fr4n2y
   react-text-transition: 3.0.2_biqbaboplfbrettd7655fr4n2y
   sharp: 0.31.2
 
@@ -1759,6 +1761,10 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -2203,6 +2209,17 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  /react-resize-detector/7.1.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-zXnPJ2m8+6oq9Nn8zsep/orts9vQv3elrpA+R8XTcW7DVVUJ9vwDwMXaBtykAYjMnkCIaOoK9vObyR7ZgFNlOw==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lodash: 4.17.21
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-responsive/9.0.0_react@18.2.0:
     resolution: {integrity: sha512-hyJmKpAglo1AdZsGmu1sab0VInEGzUTXT3nJ3Cl7cMDjR0ffV30lOM3N1xag456OsCGAgqRIkgloLy6tHaqZ2w==}
     engines: {node: '>=0.10'}
@@ -2238,6 +2255,18 @@ packages:
       - react-zdog
       - three
       - zdog
+    dev: false
+
+  /react-stacked-center-carousel/1.0.12_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-4Rt4f5DREWvPxwfCSLPsAyTF7ssWBqNwgS9+YGRWFOrZTUibG7w2GdZxULwAbdlh6/S0vRcwoGmTXl5nlBpbIA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-resize-detector: 7.1.2_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /react-text-transition/3.0.2_biqbaboplfbrettd7655fr4n2y:

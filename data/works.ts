@@ -3,17 +3,17 @@ import gamedayImage from "../public/images/gameday.png";
 import marvaloImage from "../public/images/marvalo.png";
 import eleganterImage from "../public/images/eleganter.png";
 
-type project = {
+type work = {
   id: number;
   image: StaticImageData;
   title: string;
   snippet: string;
   body: string;
   primaryLink: String;
-  secondaryLink?: String;
+  secondaryLink?: string;
 };
 
-export const work: Array<project> = [
+export const works: Array<work> = [
   {
     id: 1,
     image: eleganterImage,

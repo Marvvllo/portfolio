@@ -5,19 +5,20 @@ import { PrimaryButton } from "../components/Buttons";
 import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
 import AboutMeImage from "../public/images/about-me.png";
-import { work } from "../data/work";
+import { works } from "../data/works";
 import OutlinedText from "../components/OutlinedText";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { useState } from "react";
+import WorksSection from "../components/WorksSection";
 
 const Home: NextPage = () => {
   return (
-    <main className="text-white flex flex-col gap-24">
+    <main className="text-white flex flex-col gap-32">
       <Hero />
 
       <AboutMe />
 
-      <WorkSection />
+      <WorksSection />
     </main>
   );
 };
@@ -37,7 +38,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="isolate flex flex-col items-center">
-      <OutlinedText className="md:self-start text-3xl md:text-8xl -ml-1.5 -mb-[1.25em] md:-mb-half-text">
+      <OutlinedText className="md:self-start text-4xl md:text-8xl -ml-1.5 -mb-[1.25em] md:-mb-half-text">
         {/* Marvello<span className="inline md:hidden"> Nyahu</span> */}
         <ReactTextTransition
           springConfig={presets.gentle}
@@ -49,7 +50,7 @@ const Hero: React.FC = () => {
         <span className="block md:hidden"> Developer</span>
       </OutlinedText>
 
-      <div className="z-10 flex flex-col md:grid grid-cols-2 md:gap-8 md:items-center">
+      <div className="z-10 flex flex-col md:grid grid-cols-2 gap-2 md:gap-8 md:items-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -74,7 +75,7 @@ const Hero: React.FC = () => {
         </motion.div>
         <div className="flex flex-col items-center md:items-start gap-2">
           <span className="text-center md:text-left font-semibold text-2xl">
-            <h2 className="">{"Hello I'm Marvello Nyahu,"}</h2>
+            <h2 className="">{"I'm Marvello Nyahu,"}</h2>
             <h2 className="">A developer with design experience.</h2>
           </span>
           <PrimaryButton href="/work" arrow>
@@ -97,7 +98,7 @@ const AboutMe = () => {
         About
       </OutlinedText>
 
-      <div className="grid md:grid-cols-2 items-center gap-8">
+      <div className="grid md:grid-cols-2 items-center gap-2 md:gap-8">
         <div className="md:justify-self-end">
           <Image
             height={500}
@@ -129,7 +130,7 @@ const WorkSection = () => {
       <div className="">
         <h2 className="heading text-3xl md:text-6xl">Work</h2>
       </div>
-      {work.map((work) => (
+      {works.map((work) => (
         <WorkItem
           key={work.id}
           image={work.image}
