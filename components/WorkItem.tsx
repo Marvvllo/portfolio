@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { HTMLProps, useRef } from "react";
 import { motion, Variants } from "framer-motion";
 import { PrimaryButton, SecondaryButton } from "./Buttons";
+import { work } from "../types";
 
 const itemVariants: Variants = {
   invisible: {
@@ -18,16 +19,12 @@ const itemVariants: Variants = {
 };
 
 type Props = {
-  image: StaticImageData;
-  title: string;
-  snippet: string;
+  work: work;
 };
 
 const WorkItem: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
   className,
-  image,
-  title,
-  snippet,
+  work,
 }) => {
   return (
     <motion.section
@@ -35,21 +32,21 @@ const WorkItem: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
       whileInView="visible"
       variants={itemVariants}
       viewport={{ once: true }}
-      className={`flex flex-col items-start md:grid grid-cols-work-item md:gap-8 md:items-center md:content-start isolate ${className}`}
+      className={`flex flex-col items-start md:grid grid-cols-2 md:gap-8 md:items-center md:content-start isolate ${className}`}
     >
       <div className="-z-10">
         <Image
           className="rounded-md"
-          src={image}
+          src={work.image}
           alt="Project Image"
         />
       </div>
       <div className="flex flex-col items-start">
-        <h3 className="heading self-center text-2xl md:text-5xl -mt-half-text md:mt-0 md:-translate-x-[50%] md:self-start">
-          {title}
+        <h3 className="heading text-2xl md:text-5xl mt-2 md:mt-0 md:self-start">
+          {work.title}
         </h3>
 
-        <p className="text-lg mt-1">{snippet}</p>
+        <p className="text-lg">{work.snippet}</p>
 
         <PrimaryButton
           className="my-2"

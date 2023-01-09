@@ -9,7 +9,7 @@
 @tailwind components;
 @layer components {
   .heading {
-    @apply font-display font-bold text-center;
+    @apply font-display text-4xl;
   }
 }
 
@@ -22,6 +22,21 @@
   30% {
     transform: translateY(15%);
   }
+}
+
+html {
+  scroll-padding-top: 4rem;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 svg #wheel {

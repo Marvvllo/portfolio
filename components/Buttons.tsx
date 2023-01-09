@@ -2,21 +2,22 @@ import Link, { LinkProps } from "next/link";
 import React, { HTMLProps } from "react";
 
 type Props = {
+  target?: string;
   arrow?: boolean;
 };
 
 export const PrimaryButton: React.FC<
   LinkProps & HTMLProps<HTMLAnchorElement> & Props
-> = ({ children, href, className, arrow = false }) => {
+> = ({ children, href, className, target, arrow = false }) => {
   return (
     <Link
       href={href}
-      className={`flex flex-row justify-start items-center gap-2
-         bg-white rounded-md px-2 py-2
+      className={`flex flex-row justify-between items-center gap-2
+         bg-white rounded-md p-2
         font-medium text-black ring-2 ring-white group
         hover:bg-transparent hover:text-white transition-colors duration-300
         ${className}`}
-      target="_blank"
+      target={target}
     >
       <p>{children}</p>
       {arrow && (
@@ -41,13 +42,13 @@ export const PrimaryButton: React.FC<
 
 export const SecondaryButton: React.FC<
   LinkProps & HTMLProps<HTMLAnchorElement> & Props
-> = ({ children, href, className, arrow = false }) => {
+> = ({ children, href, className, target, arrow = false }) => {
   return (
     <Link
       href={href}
-      target="_blank"
-      className={`flex flex-row justify-start items-center 
-          gap-2 ring-2 ring-white rounded-md px-2 py-2 
+      target={target}
+      className={`flex flex-row justify-between items-center 
+          gap-2 ring-2 ring-white rounded-md p-2
           font-medium text-white group
           hover:bg-white hover:text-black transition-colors duration-300
           ${className}`}

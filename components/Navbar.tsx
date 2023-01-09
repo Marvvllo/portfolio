@@ -43,13 +43,13 @@ const navLinks = [
   },
   {
     id: 2,
-    text: "Timeline",
-    href: "/timeline",
+    text: "Work",
+    href: "/work",
   },
   {
     id: 3,
-    text: "Work",
-    href: "/work",
+    text: "Timeline",
+    href: "/timeline",
   },
   {
     id: 4,

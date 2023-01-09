@@ -15,9 +15,6 @@ module.exports = {
         sans: "Montserrat",
         display: "GetaiGrotesk"
       },
-      gridTemplateColumns: {
-        'work-item': "2fr 1fr"
-      },
       spacing: {
         'half-text': '.55em'
       },

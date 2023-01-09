@@ -13,8 +13,8 @@ const OutlinedText: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
 }) => {
   return (
     <div className={`${className} relative `}>
-      <h2 className="heading z-0">{children}</h2>
-      <h2 className="z-20 absolute top-0 left-0 right-0 heading text-transparent text-outlined">
+      <h2 className="heading md:text-8xl z-0">{children}</h2>
+      <h2 className="z-20 absolute top-0 left-0 right-0 heading md:text-8xl text-transparent text-outlined">
         {children}
       </h2>
     </div>
