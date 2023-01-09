@@ -46,7 +46,7 @@ const WorkItem: React.FC<HTMLProps<HTMLDivElement> & Props> = ({
           {work.title}
         </h3>
 
-        <p className="text-lg">{work.snippet}</p>
+        <p className="text-lg">{work.category}</p>
 
         <PrimaryButton
           className="my-2"
