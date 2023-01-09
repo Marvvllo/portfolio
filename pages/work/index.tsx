@@ -17,6 +17,7 @@ const Work = () => {
         <div className="hidden md:block col-span-2 relative h-full">
           {works.map((work) => (
             <motion.div
+              key={work.id}
               className="absolute left-0 top-0 aspect-video"
               animate={{
                 y: work.id == selectedID ? 0 : 200,
@@ -39,7 +40,10 @@ const Work = () => {
           </h2>
           <ul className="md:h-64 overflow-y-scroll scrollbar-hide">
             {works.map((work) => (
-              <li onMouseEnter={() => handleHover(work.id)}>
+              <li
+                key={work.id}
+                onMouseEnter={() => handleHover(work.id)}
+              >
                 <Link
                   className="flex flex-row justify-between border-solid border-white border-b-2  p-4"
                   href={`/work/${work.title}`}
