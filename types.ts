@@ -1,16 +1,16 @@
 import { StaticImageData } from "next/image";
 
-export interface work {
+export type work = {
   id: number;
   image: StaticImageData;
   title: string;
   category: string;
   body: string;
   link: String;
-}
+};
 
-export interface skill {
+export type skill = {
   id: number;
   image: StaticImageData;
   name: string;
-}
+};
