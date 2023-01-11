@@ -12,8 +12,8 @@ module.exports = {
         gold: "#FFDD03"
       },
       fontFamily: {
-        sans: "Montserrat",
-        display: "GetaiGrotesk"
+        sans: ["Montserrat", "sans-serif"],
+        display: ["GetaiGrotesk", "sans-serif"]
       },
       gridTemplateColumns: {
         timeline: '.5rem 1fr',
