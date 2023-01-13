@@ -5,10 +5,7 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from "../components/Buttons";
-import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
-import { works } from "../data/works";
-import { skills } from "../data/skills";
 import OutlinedText from "../components/OutlinedText";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { useState } from "react";
