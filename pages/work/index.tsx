@@ -5,51 +5,60 @@ import { useState } from "react";
 import { works } from "../../data/works";
 
 const Work = () => {
-  const [selectedID, setSelectedID] = useState(1);
+  const [selectedID, setSelectedID] = useState(works.at(0)?.id);
 
-  const handleHover = (id: number) => {
+  const handleHover = (id: string) => {
     setSelectedID(id);
   };
 
   return (
     <main className="">
-      <div className="md:grid grid-cols-3 mt-auto gap-8">
+      <div className="md:grid grid-cols-3 md:mt-8 gap-8">
+        {/* Image */}
         <div className="hidden md:block col-span-2 relative h-full">
           {works.map((work) => (
             <motion.div
               key={work.id}
               className="absolute left-0 top-0 aspect-video"
               animate={{
-                y: work.id == selectedID ? 0 : 200,
+                scale: work.id == selectedID ? 1 : 0.9,
                 opacity: work.id == selectedID ? 1 : 0,
               }}
               transition={{ duration: 0.4 }}
             >
               <Image
-                className="rounded-md"
-                src={work.image}
+                className="rounded-xl"
+                style={{
+                  objectFit: "contain",
+                }}
+                src={work.thumbnail}
                 alt={work.title}
+                width={780}
+                height={320}
               />
             </motion.div>
           ))}
         </div>
 
-        <div className="">
-          <h2 className="heading md:text-6xl border-solid border-white border-b-2 mt-24">
+        {/* Details */}
+        <div className="h-full">
+          <h2 className="heading md:text-6xl border-solid border-white border-b-2">
             Work
           </h2>
-          <ul className="md:h-64 overflow-y-scroll scrollbar-hide">
+          <ul className="flex flex-col gap-4 p-4 md:h-96 overflow-y-scroll scrollbar-hide ">
             {works.map((work) => (
               <li
+                className="ring-2 ring-white rounded-md
+          font-medium text-white group
+          hover:bg-white hover:text-black transition-colors duration-300"
                 key={work.id}
                 onMouseEnter={() => handleHover(work.id)}
               >
                 <Link
-                  className="flex flex-row justify-between border-solid border-white border-b-2  p-4"
+                  className="flex justify-between items-center p-4"
                   href={`/work/${work.title}`}
                 >
-                  <p>{work.title}</p>
-                  <p>{work.category}</p>
+                  <p className="font-semibold">{work.title}</p>
                 </Link>
               </li>
             ))}

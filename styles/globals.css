@@ -28,6 +28,11 @@
 html {
   scroll-padding-top: 4rem;
 }
+html,
+body,
+#__next {
+  min-height: 100vh;
+}
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
