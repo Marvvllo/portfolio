@@ -5,10 +5,7 @@ import {
   PrimaryButton,
   SecondaryButton,
 } from "../components/Buttons";
-import WorkItem from "../components/WorkItem";
 import photograph from "../public/images/photograph.jpg";
-import { works } from "../data/works";
-import { skills } from "../data/skills";
 import OutlinedText from "../components/OutlinedText";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { useState } from "react";
@@ -17,12 +14,6 @@ const Home: NextPage = () => {
   return (
     <main className="h-full text-white flex flex-col items-center gap-16 md:gap-32 mb-4">
       <Hero />
-
-      {/* <SelectedCases /> */}
-
-      {/* <SkillsSection /> */}
-
-      {/* <JourneySection /> */}
     </main>
   );
 };
@@ -110,58 +101,6 @@ const Hero: React.FC = () => {
       <OutlinedText className="hidden md:block text-4xl order-1 md:text-8xl -ml-1.5 -mt-half-text">
         Developer
       </OutlinedText>
-    </section>
-  );
-};
-
-// Preview section of my works
-const SelectedCases = () => {
-  return (
-    <section id="work">
-      <h2 className="heading md:text-6xl">Selected Cases</h2>
-      <div className="flex flex-col gap-8 md:gap-16 my-4 md:my-8">
-        {works.map((work) => (
-          <WorkItem key={work.id} work={work} />
-        ))}
-      </div>
-    </section>
-  );
-};
-
-// Skills/Tech used
-const SkillsSection = () => {
-  return (
-    <section id="skills" className="w-full">
-      <h2 className="heading md:text-6xl">Skills</h2>
-      {/* Skills Grid */}
-      <div className="flex flex-col md:grid grid-cols-3 auto-cols-auto gap-6 my-4">
-        {skills.map((skill) => (
-          <div
-            key={skill.id}
-            className="flex flex-row gap-4 items-center ring-2 ring-white hover:bg-white hover:text-black hover:scale-105 transition-all group rounded-lg p-4"
-          >
-            <Image
-              className="w-12 aspect-square group-hover:grayscale group-hover:invert"
-              src={skill.image}
-              alt={`Logo of ${skill.name}`}
-            />
-            <div className="">
-              <p className="font-medium text-2xl md:text-xl cursor-default">
-                {skill.name}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-// Journey/Timeline Preview
-const JourneySection = () => {
-  return (
-    <section>
-      <h2 className="heading md:text-7xl"></h2>
     </section>
   );
 };
