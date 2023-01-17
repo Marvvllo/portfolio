@@ -15,7 +15,7 @@ export const works: Array<work> = [
     categories: ["Branding"],
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea eum vel dignissimos quo eveniet obcaecati, et reiciendis impedit magnam dolorem numquam, deserunt illo sequi?",
-    images: [nyahuBranding],
+    images: [],
 
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
@@ -25,7 +25,7 @@ export const works: Array<work> = [
     title: "Friendly Neigborhood",
     categories: ["Web Development", "Design"],
     description: "Description",
-    images: [nyahuBranding],
+    images: [],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
@@ -34,7 +34,7 @@ export const works: Array<work> = [
     title: "Eleganter",
     categories: ["Web Development", "Design"],
     description: "Description",
-    images: [nyahuBranding],
+    images: [],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
@@ -43,7 +43,7 @@ export const works: Array<work> = [
     title: "Marvalo",
     categories: ["Web Development", "Design"],
     description: "Description",
-    images: [nyahuBranding],
+    images: [],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
@@ -52,7 +52,7 @@ export const works: Array<work> = [
     title: "GameDay",
     categories: ["Web Development", "Design"],
     description: "Description",
-    images: [nyahuBranding],
+    images: [],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
 ];
