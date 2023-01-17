@@ -83,7 +83,7 @@ const Project: NextPage<work> = ({
       <div className="flex flex-col lg:grid grid-cols-2  gap-2 mt-2">
         <div className="space-y-2">
           <h1 className="heading text-3xl md:text-4xl">{title}</h1>
-          <ul className="text-2xl md:text-xl font-semibold">
+          <ul className="text-lg md:text-xl font-semibold">
             {categories.map((category, index) => (
               <li key={index}>{category}</li>
             ))}
