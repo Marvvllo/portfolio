@@ -46,7 +46,7 @@ const Project: NextPage<work> = ({
   link,
 }) => {
   return (
-    <main className="flex flex-col gap-4 lg:px-64">
+    <main className="flex flex-col gap-4 lg:px-32">
       {/* Back button */}
       <Link
         href="/work"
@@ -73,17 +73,17 @@ const Project: NextPage<work> = ({
       {/* Content */}
 
       <Image
-        className="rounded-md"
+        className="rounded-md self-center"
         src={thumbnail}
         alt="Branding Image"
-        width={780}
-        height={320}
+        width={860}
+        height={640}
       />
 
       <div className="flex flex-col lg:grid grid-cols-2  gap-2 mt-2">
         <div className="space-y-2">
           <h1 className="heading text-3xl md:text-4xl">{title}</h1>
-          <ul className="text-lg md:text-xl font-semibold">
+          <ul className="text-lg font-medium">
             {categories.map((category, index) => (
               <li key={index}>{category}</li>
             ))}
