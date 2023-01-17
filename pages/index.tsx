@@ -73,10 +73,22 @@ const Hero: React.FC = () => {
             <h2 className="heading text-3xl md:text-4xl">
               Marvello Nyahu
             </h2>
-            <p className="text-lg">
-              An aspiring front-end developer designing and creating
-              with <b>Figma</b>, <b>React</b>, <b>Next JS</b>, and{" "}
-              <b>Tailwind CSS</b>
+            <p className="text-lg md:text-xl">
+              An aspiring developer with a knack for{" "}
+              <span className="font-display md:text-2xl">
+                beautiful
+              </span>{" "}
+              and{" "}
+              <span className="font-display md:text-2xl">
+                {" "}
+                efficient
+              </span>{" "}
+              websites for startups with{" "}
+              <span className="font-display md:text-2xl">
+                {" "}
+                taste
+              </span>{" "}
+              .
             </p>
           </span>
 
