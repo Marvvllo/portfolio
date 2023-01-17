@@ -73,7 +73,7 @@ const Project: NextPage<work> = ({
       {/* Content */}
 
       <Image
-        className="rounded-md self-center"
+        className="h-40 sm:h-auto rounded-md self-center object-cover"
         src={thumbnail}
         alt="Branding Image"
         width={860}

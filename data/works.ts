@@ -1,16 +1,16 @@
 import { StaticImageData } from "next/image";
-import gamedayBranding from "../public/images/gameday.png";
-import marvaloBranding from "../public/images/marvalo.png";
-import eleganterBranding from "../public/images/eleganter.png";
-import fnsmBranding from "../public/images/fnsm.png";
-import nyahuBranding from "../public/images/nyahu-branding.png";
+import gamedayBrand from "../public/images/gameday-brand.png";
+import marvaloBrand from "../public/images/marvalo-brand.png";
+import eleganterBrand from "../public/images/eleganter-brand.png";
+import fnsmBrand from "../public/images/fnsm-brand.png";
+import nyahuBrand from "../public/images/nyahu-brand.png";
 import { work } from "../types";
 import { v4 as uuidv4 } from "uuid";
 
 export const works: Array<work> = [
   {
     id: uuidv4(),
-    thumbnail: "/images/nyahu-branding.png",
+    thumbnail: "/images/nyahu-brand.png",
     title: "Nyahu",
     categories: ["Branding"],
     description:
@@ -21,7 +21,7 @@ export const works: Array<work> = [
   },
   {
     id: uuidv4(),
-    thumbnail: fnsmBranding,
+    thumbnail: fnsmBrand,
     title: "Friendly Neigborhood",
     categories: ["Web Development", "Design"],
     description: "Description",
@@ -30,7 +30,7 @@ export const works: Array<work> = [
   },
   {
     id: uuidv4(),
-    thumbnail: eleganterBranding,
+    thumbnail: eleganterBrand,
     title: "Eleganter",
     categories: ["Web Development", "Design"],
     description: "Description",
@@ -39,7 +39,7 @@ export const works: Array<work> = [
   },
   {
     id: uuidv4(),
-    thumbnail: marvaloBranding,
+    thumbnail: marvaloBrand,
     title: "Marvalo",
     categories: ["Web Development", "Design"],
     description: "Description",
@@ -48,7 +48,7 @@ export const works: Array<work> = [
   },
   {
     id: uuidv4(),
-    thumbnail: gamedayBranding,
+    thumbnail: gamedayBrand,
     title: "GameDay",
     categories: ["Web Development", "Design"],
     description: "Description",
