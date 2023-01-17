@@ -2,10 +2,11 @@ import { StaticImageData } from "next/image";
 
 export type work = {
   id: string;
-  thumbnail: StaticImageData;
+  thumbnail: string | StaticImageData;
   title: string;
-  category: string[];
-  body: string;
+  categories: string[];
+  description: string;
+  images: string[] | StaticImageData[];
   link: String;
 };
 

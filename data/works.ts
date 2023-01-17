@@ -1,51 +1,58 @@
 import { StaticImageData } from "next/image";
-import gamedayImage from "../public/images/gameday.png";
-import marvaloImage from "../public/images/marvalo.png";
-import eleganterImage from "../public/images/eleganter.png";
-import fnsmImage from "../public/images/fnsm.png";
-import nyahuImage from "../public/images/nyahu-branding.png";
+import gamedayBranding from "../public/images/gameday.png";
+import marvaloBranding from "../public/images/marvalo.png";
+import eleganterBranding from "../public/images/eleganter.png";
+import fnsmBranding from "../public/images/fnsm.png";
+import nyahuBranding from "../public/images/nyahu-branding.png";
 import { work } from "../types";
 import { v4 as uuidv4 } from "uuid";
 
 export const works: Array<work> = [
   {
     id: uuidv4(),
-    thumbnail: nyahuImage,
-    title: "Иyahu",
-    category: ["Branding"],
-    body: "Description",
+    thumbnail: "/images/nyahu-branding.png",
+    title: "Nyahu",
+    categories: ["Branding"],
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea eum vel dignissimos quo eveniet obcaecati, et reiciendis impedit magnam dolorem numquam, deserunt illo sequi?",
+    images: [nyahuBranding],
+
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
     id: uuidv4(),
-    thumbnail: fnsmImage,
+    thumbnail: fnsmBranding,
     title: "Friendly Neigborhood",
-    category: ["Web Development", "Design"],
-    body: "Description",
+    categories: ["Web Development", "Design"],
+    description: "Description",
+    images: [nyahuBranding],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
     id: uuidv4(),
-    thumbnail: eleganterImage,
+    thumbnail: eleganterBranding,
     title: "Eleganter",
-    category: ["Web Development", "Design", "Testing fr"],
-    body: "Description",
+    categories: ["Web Development", "Design"],
+    description: "Description",
+    images: [nyahuBranding],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
     id: uuidv4(),
-    thumbnail: marvaloImage,
+    thumbnail: marvaloBranding,
     title: "Marvalo",
-    category: ["Web Development", "Design"],
-    body: "Description",
+    categories: ["Web Development", "Design"],
+    description: "Description",
+    images: [nyahuBranding],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
   {
     id: uuidv4(),
-    thumbnail: gamedayImage,
+    thumbnail: gamedayBranding,
     title: "GameDay",
-    category: ["Web Development", "Design"],
-    body: "Description",
+    categories: ["Web Development", "Design"],
+    description: "Description",
+    images: [nyahuBranding],
     link: "https://marvalo.vercel.app/agents/707eab51-4836-f488-046a-cda6bf494859",
   },
 ];
