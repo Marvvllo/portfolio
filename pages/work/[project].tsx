@@ -46,7 +46,7 @@ const Project: NextPage<work> = ({
   link,
 }) => {
   return (
-    <main className="flex flex-col gap-4 lg:px-32">
+    <main className="flex flex-col gap-4 lg:px-16">
       {/* Back button */}
       <Link
         href="/work"
@@ -73,35 +73,58 @@ const Project: NextPage<work> = ({
       {/* Content */}
 
       <Image
-        className="h-40 sm:h-auto rounded-md self-center object-cover"
+        className="h-40 sm:h-auto w-full rounded-xl self-center object-cover"
         src={thumbnail}
         alt="Branding Image"
         width={860}
         height={640}
       />
 
-      <div className="flex flex-col lg:grid grid-cols-2  gap-2 mt-2">
-        <div className="space-y-2">
-          <h1 className="heading text-3xl md:text-4xl">{title}</h1>
-          <ul className="text-lg font-medium">
-            {categories.map((category, index) => (
-              <li key={index}>{category}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="flex flex-col gap-2 my-8">
+        <Link href={link} className="">
+          <h1 className="flex flex-row gap-1 heading text-3xl md:text-4xl border-solid border-b-2 pb-1 border-white group">
+            {title}
+            {link !== "" ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-8 aspect-square -translate-y-1 group-hover:translate-x-2 transition-transform duration-300"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
+            ) : null}
+          </h1>
+        </Link>
 
-        <p>{description}</p>
+        <div className="lg:grid grid-cols-2">
+          <div className="grid grid-cols-2 my-8 md:self-center">
+            <h2 className="heading text-xl">Category</h2>
+            <ul className="text-base font-medium">
+              {categories.map((category, index) => (
+                <li key={index}>{category}</li>
+              ))}
+            </ul>
+          </div>
+          <p>{description}</p>
+        </div>
       </div>
 
-      <div className="">
+      <div className="flex flex-col gap-8 md:gap-12">
         {images.map((image, index) => (
           <Image
             key={index}
-            className="rounded-md"
+            className="h-auto sm:h-auto w-full rounded-xl self-center object-cover"
             src={image}
             alt="Branding Image"
-            width={720}
-            height={360}
+            width={860}
+            height={640}
           />
         ))}
       </div>

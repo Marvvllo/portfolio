@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
         >
           <Image
             height={500}
-            className="ml-auto rounded-md w-full md:w-96"
+            className="ml-auto rounded-xl w-full md:w-96"
             src={photograph}
             alt="Image of Marvello Nyahu"
           />
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               Marvello Nyahu
             </h2>
             <p className="text-lg md:text-xl">
-              An aspiring developer with a knack for{" "}
+              An aspiring developer and UI designer with a knack for{" "}
               <span className="font-display md:text-2xl">
                 beautiful
               </span>{" "}
@@ -102,10 +102,10 @@ const Hero: React.FC = () => {
 
           <SecondaryButton
             className="w-full md:w-auto mt-2"
-            href="/timeline"
+            href="/contact"
             arrow
           >
-            Check out my journey
+            Contact me
           </SecondaryButton>
         </div>
       </div>
