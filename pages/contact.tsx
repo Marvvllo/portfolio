@@ -61,7 +61,7 @@ const ContactInfo: React.FC = () => {
           </span>
 
           <Link
-            href="instagram.com"
+            href="https://www.instagram.com/marv.11/"
             className="w-full md:w-auto mt-2 flex flex-row justify-between items-center gap-2
          bg-white rounded-md p-2
         font-medium text-black ring-2 ring-white group
