@@ -104,7 +104,7 @@ const Project: NextPage<work> = ({
         </Link>
 
         <div className="lg:grid grid-cols-2">
-          <div className="grid grid-cols-2 mt-8 md:self-center">
+          <div className="grid grid-cols-2 my-8 md:self-center">
             <h2 className="heading text-xl">Category</h2>
             <ul className="text-base font-medium">
               {categories.map((category, index) => (
