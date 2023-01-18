@@ -7,7 +7,7 @@ export type work = {
   categories: string[];
   description: string;
   images: string[] | StaticImageData[];
-  link: String;
+  link: string;
 };
 
 export type skill = {

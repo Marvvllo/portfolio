@@ -46,11 +46,11 @@ const navLinks = [
     text: "Work",
     href: "/work",
   },
-  {
-    id: 3,
-    text: "Timeline",
-    href: "/timeline",
-  },
+  // {
+  //   id: 3,
+  //   text: "Timeline",
+  //   href: "/timeline",
+  // },
   {
     id: 4,
     text: "Contact",
