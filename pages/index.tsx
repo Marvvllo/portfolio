@@ -21,6 +21,7 @@ const Home: NextPage = () => {
 // Hero section at top of page
 const Hero: React.FC = () => {
   const texts = ["Front End", "React", "Next JS", "Tailwind"];
+  // const alternateTexts = ["Minimal", "Stunning", "Beautiful", "Efficient"];
 
   const [textIndex, setTextIndex] = useState(0);
 
@@ -73,7 +74,7 @@ const Hero: React.FC = () => {
             <h2 className="heading text-3xl md:text-4xl">
               Marvello Nyahu
             </h2>
-            <p className="text-lg md:text-xl">
+            <p className="md:text-xl my-2 md:my-0">
               An aspiring developer and UI designer with a knack for{" "}
               <span className="font-display md:text-2xl">
                 beautiful

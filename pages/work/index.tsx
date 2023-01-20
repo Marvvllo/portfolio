@@ -27,7 +27,7 @@ const Work = () => {
               transition={{ duration: 0.4 }}
             >
               <Image
-                className="rounded-xl"
+                className="rounded-xl border-solid border-2 border-white"
                 style={{
                   objectFit: "contain",
                 }}
