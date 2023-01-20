@@ -46,12 +46,12 @@ const Project: NextPage<work> = ({
   link,
 }) => {
   return (
-    <main className="flex flex-col gap-4 lg:px-16">
+    <main className="flex flex-col gap-4 lg:px-40">
       {/* Back button */}
       <Link
         href="/work"
         className="flex flex-row justify-between items-center self-start  
-          gap-2 rounded-md font-medium hover:opacity-80 transition-opacity"
+          gap-1 rounded-md font-medium group transition-opacity"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Project: NextPage<work> = ({
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300"
         >
           <path
             strokeLinecap="round"
@@ -73,14 +73,14 @@ const Project: NextPage<work> = ({
       {/* Content */}
 
       <Image
-        className="h-40 sm:h-auto w-full rounded-xl self-center object-cover"
+        className="h-40 sm:h-auto w-full rounded-xl border-solid border-2 border-white self-center object-cover"
         src={thumbnail}
         alt="Branding Image"
         width={860}
         height={640}
       />
 
-      <div className="flex flex-col gap-2 my-8">
+      <div className="flex flex-col gap-2 my-4">
         <Link href={link} className="">
           <h1 className="flex flex-row gap-1 heading text-3xl md:text-4xl border-solid border-b-2 pb-1 border-white group">
             {title}
@@ -120,7 +120,7 @@ const Project: NextPage<work> = ({
         {images.map((image, index) => (
           <Image
             key={index}
-            className="h-auto sm:h-auto w-full rounded-xl self-center object-cover"
+            className="h-auto sm:h-auto w-full rounded-xl border-solid border-2 border-white self-center object-cover"
             src={image}
             alt="Branding Image"
             width={860}
