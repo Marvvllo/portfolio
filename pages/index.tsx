@@ -67,6 +67,7 @@ const Hero: React.FC = () => {
             className="ml-auto rounded-xl w-full md:w-96"
             src={photograph}
             alt="Image of Marvello Nyahu"
+            loading="eager"
           />
         </motion.div>
         <div className="flex flex-col items-center md:items-start gap-2">
