@@ -20,6 +20,10 @@ const Work = () => {
             <motion.div
               key={work.id}
               className="absolute left-0 top-0 aspect-video"
+              initial={{
+                scale: 0.9,
+                opacity: 0,
+              }}
               animate={{
                 scale: work.id == selectedID ? 1 : 0.9,
                 opacity: work.id == selectedID ? 1 : 0,
