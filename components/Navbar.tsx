@@ -10,14 +10,8 @@ const itemVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: { type: "spring", stiffness: 300, damping: 24 },
-    pointerEvents: "auto",
   },
-  closed: {
-    opacity: 0,
-    y: 40,
-    pointerEvents: "none",
-    transition: { duration: 0.2 },
-  },
+  closed: { opacity: 0, y: 40, transition: { duration: 0.2 } },
 };
 
 const listVariants: Variants = {
@@ -52,22 +46,30 @@ const navLinks = [
     text: "Work",
     href: "/work",
   },
+  // {
+  //   id: 3,
+  //   text: "Timeline",
+  //   href: "/timeline",
+  // },
   {
-    id: 3,
+    id: 4,
     text: "Contact",
     href: "/contact",
   },
 ];
 
 const Navbar: React.FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
   const isMedium = useMediaQuery({
     query: "(min-width: 768px)",
   });
-  const [isNavOpen, setIsNavOpen] = useState(isMedium ? true : false);
-  const router = useRouter();
+
   useEffect(() => {
-    console.log(isNavOpen);
-  }, [isNavOpen]);
+    if (isMedium) {
+      setIsNavOpen(true);
+    }
+  }, [isMedium]);
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center py-2 px-8 md:px-12 bg-gradient-to-b from-black to-transparent isolate text-white">
@@ -88,6 +90,7 @@ const Navbar: React.FC = () => {
           bg-black/50 md:bg-transparent flex flex-col md:flex-row items-center justify-center gap-16 md:gap-12 text-2xl md:text-base font-medium`}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
+        style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
       >
         {navLinks.map((nav) => (
           <motion.li variants={itemVariants} key={nav.id}>

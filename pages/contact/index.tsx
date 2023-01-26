@@ -52,6 +52,7 @@ const ContactInfo: React.FC = () => {
             width={500}
             height={500}
             alt="Image of Marvello Nyahu"
+            loading="eager"
           />
         </motion.div>
         <div className="flex flex-col items-center md:items-start gap-2">
