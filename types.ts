@@ -4,6 +4,7 @@ export type work = {
   id: string;
   thumbnail: string | StaticImageData;
   title: string;
+  techs: string[];
   categories: string[];
   description: string;
   images: string[] | StaticImageData[];

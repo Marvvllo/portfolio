@@ -29,6 +29,7 @@ export const getStaticProps: GetStaticProps = (context) => {
     props: {
       title: work?.title,
       thumbnail: work?.thumbnail,
+      techs: work?.techs,
       categories: work?.categories,
       description: work?.description,
       images: work?.images,
@@ -40,6 +41,7 @@ export const getStaticProps: GetStaticProps = (context) => {
 const Project: NextPage<work> = ({
   title,
   thumbnail,
+  techs,
   categories,
   description,
   images,
@@ -50,8 +52,9 @@ const Project: NextPage<work> = ({
       {/* Back button */}
       <Link
         href="/work"
-        className="flex flex-row justify-between items-center self-start  
-          gap-1 rounded-md font-medium group transition-opacity"
+        target="_blank"
+        className="group flex flex-row items-center justify-between  
+          gap-1 self-start rounded-md font-medium transition-opacity"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +62,7 @@ const Project: NextPage<work> = ({
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300"
+          className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1"
         >
           <path
             strokeLinecap="round"
@@ -73,16 +76,16 @@ const Project: NextPage<work> = ({
       {/* Content */}
 
       <Image
-        className="h-40 sm:h-auto w-full rounded-xl border-solid border-2 border-white self-center object-cover"
+        className="h-40 w-full self-center rounded-xl border-2 border-solid border-white object-cover sm:h-auto"
         src={thumbnail}
         alt="Branding Image"
         width={860}
         height={640}
       />
 
-      <div className="flex flex-col gap-2 my-4">
-        <Link href={link} className="">
-          <h1 className="flex flex-row gap-1 heading text-3xl md:text-4xl border-solid border-b-2 pb-1 border-white group">
+      <div className="mt-4 flex flex-col gap-2">
+        <Link href={link} target="_blank" className="">
+          <h1 className="heading group flex flex-row gap-1 border-b-2 border-solid border-white pb-1 text-3xl md:text-4xl">
             {title}
             {link !== "" ? (
               <svg
@@ -91,7 +94,7 @@ const Project: NextPage<work> = ({
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-8 aspect-square -translate-y-1 group-hover:translate-x-2 transition-transform duration-300"
+                className="aspect-square w-8 -translate-y-1 transition-transform duration-300 group-hover:translate-x-2"
               >
                 <path
                   strokeLinecap="round"
@@ -103,8 +106,19 @@ const Project: NextPage<work> = ({
           </h1>
         </Link>
 
-        <div className="lg:grid grid-cols-2">
-          <div className="grid grid-cols-2 my-8 md:self-center">
+        <div className="grid-cols-3 place-items-center md:place-items-start lg:grid">
+          {/* Tech Used */}
+          <div className="flex flex-col self-center py-4">
+            <h2 className="heading text-xl">Tech Used</h2>
+            <ul className="text-base font-medium">
+              {techs.map((tech, index) => (
+                <li key={index}>{tech}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Category */}
+          <div className="flex flex-col border-t-2 border-white py-4 md:self-center md:border-0">
             <h2 className="heading text-xl">Category</h2>
             <ul className="text-base font-medium">
               {categories.map((category, index) => (
@@ -112,15 +126,19 @@ const Project: NextPage<work> = ({
               ))}
             </ul>
           </div>
-          <p>{description}</p>
+
+          {/* Description */}
+          <div className="border-t-2 border-white py-4 md:border-0">
+            <p>{description}</p>
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 md:gap-12">
+      <div className="flex flex-col gap-8 md:gap-16">
         {images.map((image, index) => (
           <Image
             key={index}
-            className="h-auto sm:h-auto w-full rounded-xl border-solid border-2 border-white self-center object-cover"
+            className="h-auto w-full self-center rounded-xl border-2 border-solid border-white object-cover sm:h-auto"
             src={image}
             alt="Branding Image"
             width={860}
