@@ -64,7 +64,7 @@ export const works: Array<work> = [
     id: uuidv4(),
     thumbnail: "/images/gameday/brand.png",
     title: "GameDay",
-    techs: ["Figma", "TypeScript", "Next JS"],
+    techs: ["Figma", "PHP", "CodeIgniter"],
     categories: ["Web Development", "Design"],
     description:
       "GameDay is a ticket-buying website specializing in sports. The goal of this website is to introduce the idea of buying more affordable with less hassle tickets online.",
