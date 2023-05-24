@@ -5,6 +5,18 @@ import { v4 as uuidv4 } from "uuid";
 export const works: Array<work> = [
   {
     id: uuidv4(),
+    thumbnail: "/images/telkom/thumb.png",
+    title: "Telkom",
+    techs: ["Figma", "TypeScript", "Next JS", "Tailwind CSS"],
+    categories: ["UI/UX Design", "Web Development"],
+    description:
+      "This is a website I made in my 3-month internship at Wilayah Telkom Palangka Raya, focusing on UI/UX design practices and minimalist aesthetics.",
+    images: ["/images/telkom/indihome.png", "/images/telkom/astinet.png"],
+
+    link: "https://telkom-marvel.vercel.app/",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/images/nyahu/brand.png",
     title: "Nyahu",
     techs: ["Figma", "TypeScript", "Next JS", "Tailwind CSS"],
