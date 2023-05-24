@@ -13,9 +13,9 @@ const Work = () => {
 
   return (
     <main className="">
-      <div className="md:grid grid-cols-3 md:mt-8 gap-8">
+      <div className="grid-cols-3 gap-8 md:mt-8 md:grid">
         {/* Image */}
-        <div className="hidden md:block col-span-2 relative h-full">
+        <div className="relative col-span-2 hidden h-full md:block">
           {works.map((work) => (
             <motion.div
               key={work.id}
@@ -31,7 +31,7 @@ const Work = () => {
               transition={{ duration: 0.4 }}
             >
               <Image
-                className="rounded-xl border-solid border-2 border-white"
+                className="rounded-xl border-2 border-solid border-white"
                 style={{
                   objectFit: "contain",
                 }}
@@ -46,20 +46,20 @@ const Work = () => {
 
         {/* Details */}
         <div className="h-full">
-          <h2 className="heading md:text-6xl border-solid border-white border-b-2">
+          <h2 className="heading border-b-2 border-solid border-white md:text-6xl">
             Work
           </h2>
-          <ul className="flex flex-col gap-4 p-4 md:h-96 overflow-y-scroll scrollbar-hide ">
+          <ul className="scrollbar-hide flex flex-col gap-4 overflow-y-scroll p-4 md:h-96 ">
             {works.map((work) => (
               <li
-                className="ring-2 ring-white rounded-md
-          font-medium text-white group
-          hover:bg-white hover:text-black transition-colors duration-300"
+                className="group rounded-md font-medium
+          text-white ring-2 ring-white
+          transition-colors duration-300 hover:bg-white hover:text-black"
                 key={work.id}
                 onMouseEnter={() => handleHover(work.id)}
               >
                 <Link
-                  className="flex justify-between items-center p-4"
+                  className="flex items-center justify-between p-4"
                   href={`/work/${work.title}`}
                 >
                   <p className="font-semibold">{work.title}</p>

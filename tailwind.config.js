@@ -17,6 +17,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         timeline: '.5rem 1fr',
+        resumeSection: '.1fr 1fr',
       },
       spacing: {
         'half-text': '.55em'
