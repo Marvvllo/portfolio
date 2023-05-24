@@ -52,7 +52,6 @@ const Project: NextPage<work> = ({
       {/* Back button */}
       <Link
         href="/work"
-        target="_blank"
         className="group flex flex-row items-center justify-between  
           gap-1 self-start rounded-md font-medium transition-opacity"
       >
