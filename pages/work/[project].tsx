@@ -83,10 +83,10 @@ const Project: NextPage<work> = ({
       />
 
       <div className="mt-4 flex flex-col gap-2">
-        <Link href={link} target="_blank" className="">
-          <h1 className="heading group flex flex-row gap-1 border-b-2 border-solid border-white pb-1 text-3xl md:text-4xl">
-            {title}
-            {link !== "" ? (
+        {link !== "" ? (
+          <Link href={link} target="_blank" className="">
+            <h1 className="heading group flex flex-row gap-1 border-b-2 border-solid border-white pb-1 text-3xl md:text-4xl">
+              {title}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -101,9 +101,13 @@ const Project: NextPage<work> = ({
                   d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                 />
               </svg>
-            ) : null}
+            </h1>
+          </Link>
+        ) : (
+          <h1 className="heading group flex flex-row gap-1 border-b-2 border-solid border-white pb-1 text-3xl md:text-4xl">
+            {title}
           </h1>
-        </Link>
+        )}
 
         <div className="grid-cols-3 place-items-center md:place-items-start lg:grid">
           {/* Tech Used */}
