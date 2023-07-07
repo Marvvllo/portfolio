@@ -127,7 +127,7 @@ const ContactInfo: React.FC = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="text-white"
+              className="aspect-square h-6 w-6 text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:text-black"
             >
               <path
                 fill="currentColor"
