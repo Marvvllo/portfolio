@@ -13,7 +13,7 @@ const Work = () => {
 
   return (
     <main className="">
-      <div className="grid-cols-3 gap-8 md:mt-8 md:grid">
+      <div className="grid-cols-3 gap-8 md:mt-8 md:grid ">
         {/* Image */}
         <div className="relative col-span-2 hidden h-full md:block">
           {works.map((work) => (
@@ -37,8 +37,8 @@ const Work = () => {
                 }}
                 src={work.thumbnail}
                 alt={work.title}
-                width={780}
-                height={320}
+                width={1440}
+                height={640}
               />
             </motion.div>
           ))}
