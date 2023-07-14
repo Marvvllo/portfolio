@@ -70,12 +70,11 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center gap-2 md:items-start">
           <span className="my-2 text-center md:mt-0 md:text-left">
             <h2 className="heading text-3xl md:text-4xl">Marvello Nyahu</h2>
-            <p className="my-2 md:my-0 md:text-xl">
+            <p className="my-2 md:my-0 md:text-lg">
               An aspiring developer and UI designer with a knack for{" "}
-              <span className="font-display md:text-2xl">beautiful</span> and{" "}
-              <span className="font-display md:text-2xl"> efficient</span>{" "}
-              websites for startups with{" "}
-              <span className="font-display md:text-2xl"> taste</span> .
+              <span className="font-display md:text-xl">beautiful</span> and{" "}
+              <span className="font-display md:text-xl"> efficient</span>{" "}
+              websites.
             </p>
           </span>
 
