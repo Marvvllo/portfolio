@@ -9,20 +9,20 @@ module.exports = {
       colors: {
         black: "#1A1A1A",
         white: "#F3F4F6",
-        gold: "#FFDD03"
+        gold: "#FFDD03",
       },
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
-        display: ["GetaiGrotesk", "sans-serif"]
+        display: ["GetaiGrotesk", "sans-serif"],
       },
       gridTemplateColumns: {
-        timeline: '.5rem 1fr',
-        resumeSection: '.1fr 1fr',
+        timeline: ".5rem 1fr",
+        resumeSection: ".1fr 1fr",
       },
       spacing: {
-        'half-text': '.55em'
+        "half-text": ".5em",
       },
     },
   },
   plugins: [],
-}
+};
