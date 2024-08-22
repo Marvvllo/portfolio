@@ -60,10 +60,11 @@ const Hero: React.FC = () => {
           }}
         >
           <Image
-            height={500}
             className="ml-auto w-full rounded-xl md:w-96"
-            src={photograph}
+            src="/images/totheside.png"
             alt="Image of Marvello Nyahu"
+            width={500}
+            height={500}
             loading="eager"
           />
         </motion.div>

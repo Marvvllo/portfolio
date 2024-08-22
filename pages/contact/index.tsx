@@ -48,7 +48,7 @@ const ContactInfo: React.FC = () => {
         >
           <Image
             className="ml-auto w-full rounded-xl brightness-75 md:w-96"
-            src="/images/about-me.png"
+            src="/images/photograph.jpg"
             width={500}
             height={500}
             alt="Image of Marvello Nyahu"
