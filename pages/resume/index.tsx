@@ -42,10 +42,24 @@ const Resume = () => {
         <div className="w-full">
           <div className="">
             <div className="flex flex-col py-4 md:flex-row md:items-center md:gap-16">
-              <p>2021 - Now</p>
+              <p>2024 - Now</p>
               <span>
-                <h3 className="text-xl font-bold">SMK Telkom Banjarbaru</h3>
-                <p className="font-semibold">Vocational High School</p>
+                <h3 className="text-xl font-bold">D4 Software Engineering</h3>
+                <p className="font-semibold">
+                  @ Ganesha University of Education
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="flex flex-col py-4 md:flex-row md:items-center md:gap-16">
+              <p>2021 - 2024</p>
+              <span>
+                <h3 className="text-xl font-bold">Software Engineering</h3>
+                <p className="font-semibold">
+                  @ Telkom Vocational High School Banjarbaru
+                </p>
               </span>
             </div>
           </div>
@@ -55,9 +69,9 @@ const Resume = () => {
               <p>2018 - 2021</p>
               <span>
                 <h3 className="text-xl font-bold">
-                  SMP Katholik Santo Paulus Palangka Raya
+                  Saint Paul Catholic Middle School
                 </h3>
-                <p className="font-semibold">Junior High School</p>
+                <p className="font-semibold">Palangka Raya</p>
               </span>
             </div>
           </div>
