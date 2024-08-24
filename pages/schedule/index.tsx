@@ -52,7 +52,7 @@ const SchedulePage = () => {
           <ClassItem
             name="Algoritma dan Pemrograman"
             location="FTK F Jineng Lantai 2 Ruang Kuliah TRPL"
-            time="10:30 - 12:20"
+            time="10:30 - 13:20"
           />
         </span>
       </section>
