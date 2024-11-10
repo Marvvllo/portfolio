@@ -109,7 +109,7 @@ const Project: NextPage<work> = ({
           </h1>
         )}
 
-        <div className="grid-cols-3 place-items-center md:place-items-start lg:grid">
+        <div className="grid-cols-3 place-items-start md:place-items-center lg:grid">
           {/* Tech Used */}
           <div className="flex flex-col self-center py-4">
             <h2 className="heading text-xl">Tech Used</h2>
@@ -121,7 +121,7 @@ const Project: NextPage<work> = ({
           </div>
 
           {/* Category */}
-          <div className="flex flex-col border-t-2 border-white py-4 md:self-center md:border-0">
+          <div className="flex w-full flex-col border-t-2 border-white py-4 md:self-center md:border-0">
             <h2 className="heading text-xl">Category</h2>
             <ul className="text-base font-medium">
               {categories.map((category, index) => (
