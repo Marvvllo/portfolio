@@ -72,22 +72,18 @@ const Navbar: React.FC = () => {
   }, [isMedium]);
 
   return (
-    <header className="sticky top-0 inset-x-0 z-50 flex flex-row justify-between items-center py-2 px-8 md:px-12 bg-gradient-to-b from-black to-transparent isolate text-white">
-      <Link href="/" className="block z-10 font-semibold text-xl">
-        Иyahu
+    <header className="sticky inset-x-0 top-0 isolate z-50 flex flex-row items-center justify-between bg-gradient-to-b from-black to-transparent px-8 py-2 text-white md:px-12">
+      <Link href="/" className="z-10 block text-xl font-semibold">
+        Иyaivu
       </Link>
       <div className="z-10 md:hidden">
-        <Hamburger
-          color="#F3F4F6"
-          toggled={isNavOpen}
-          toggle={setIsNavOpen}
-        />
+        <Hamburger color="#F3F4F6" toggled={isNavOpen} toggle={setIsNavOpen} />
       </div>
 
       <motion.ul
         layout
-        className={`absolute md:static inset-0 w-screen h-screen md:w-auto md:h-auto backdrop-blur-sm md:backdrop-blur-none
-          bg-black/50 md:bg-transparent flex flex-col md:flex-row items-center justify-center gap-16 md:gap-12 text-2xl md:text-base font-medium`}
+        className={`absolute inset-0 flex h-screen w-screen flex-col items-center justify-center gap-16
+          bg-black/50 text-2xl font-medium backdrop-blur-sm md:static md:h-auto md:w-auto md:flex-row md:gap-12 md:bg-transparent md:text-base md:backdrop-blur-none`}
         animate={isNavOpen ? "open" : "closed"}
         variants={listVariants}
         style={{ pointerEvents: isNavOpen ? "auto" : "none" }}
