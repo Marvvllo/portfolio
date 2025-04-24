@@ -1,8 +1,9 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript, DocumentProps } from "next/document";
+import { DocumentContext, DocumentInitialProps } from "next/document";
 
-export default function Document() {
+export default function MyDocument(props: DocumentProps) {
   return (
-    <Html lang="en">
+    <Html lang="en" className="h-full">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -15,7 +16,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-black">
+      <body className="flex flex-col bg-black">
         <Main />
         <NextScript />
       </body>

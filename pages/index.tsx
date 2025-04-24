@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
   }, 2000);
 
   return (
-    <section className="isolate flex flex-col items-center">
+    <section className="isolate flex flex-col items-center justify-center">
       <OutlinedText className="-ml-1.5 mt-2 -mb-[1.25em] text-center text-4xl md:-mb-half-text md:self-start md:text-8xl">
         <ReactTextTransition
           springConfig={presets.gentle}

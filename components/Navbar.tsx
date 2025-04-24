@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
   }, [isMedium]);
 
   return (
-    <header className="sticky inset-x-0 top-0 isolate z-50 flex flex-row items-center justify-between bg-gradient-to-b from-black to-transparent px-8 py-2 text-white md:px-12">
+    <header className="sticky inset-x-0 top-0 isolate z-50 flex flex-row items-center justify-between bg-gradient-to-b from-black to-transparent px-8 py-2 text-white md:fixed md:px-12">
       <Link href="/" className="z-10 block text-xl font-semibold">
         Иyaivu
       </Link>
